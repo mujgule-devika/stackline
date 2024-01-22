@@ -8,6 +8,7 @@ export const ProductCard = styled(Card)`
   flex-direction: column;
   align-items: center;
   align-self: flex-start;
+  height: 100vh; 
 `;
 
 export const ProductImage = styled.img`
@@ -24,7 +25,7 @@ export const ProductTitle = styled.h1`
 export const Subtitle = styled.h2`
   text-align: center;
   font-size: 14px;
-  color: #68778e;
+  color: #939393;
   flex-wrap: wrap;
   padding: 1%;
 `;

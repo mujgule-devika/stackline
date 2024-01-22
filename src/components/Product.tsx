@@ -8,7 +8,7 @@ import {
   Subtitle,
 } from "./ProductStyles";
 import { selectProductData } from "../state/products/productSlice";
-
+//TODO: refactor to pass props
 type ProductInfoProps = {
   imageUrl: string;
   title: string;

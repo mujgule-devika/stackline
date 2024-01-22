@@ -33,7 +33,7 @@ export const TableHeader = styled.th`
   text-align: left;
   font-size: 16px;
   font-weight: 500;
-  color: #333;
+  color: #7e7e7e;
   background-color: #fff;
   position: sticky;
   top: 0; 
@@ -45,6 +45,6 @@ export const TableCell = styled.td`
   padding: 12px 15px;
   text-align: left;
   font-size: 14px;
-  color: #555;
+  color: #939393;
   border-bottom: 1px solid #eaeaea;
 `;

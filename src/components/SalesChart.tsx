@@ -21,7 +21,6 @@ export const SalesChart = () => {
     retailSales: number;
     wholesaleSales: number;
   }[] = salesData[0].sales;
-  console.log("sales ", sales);
 
   // Process the data to group by months and sum up the retail sales and retailer margin
   const dataForChart: {

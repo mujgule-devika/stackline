@@ -16,18 +16,6 @@ export const SalesTable = () => {
   const salesData = useAppSelector(selectProductData);
   if (!salesData.length) return null;
   const salesTableData = salesData[0].sales;
-  console.log("table data ", salesTableData);
-
-  // // Define the types for the table data
-  // type TableProps = {
-  //   data: {
-  //     retailSales: string;
-  //     wholesaleSales: string;
-  //     unitsSold: number;
-  //     retailerMargin: string;
-  //   }[];
-  // };
-  // Table component
 
   return (
     <TableContainer>

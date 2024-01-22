@@ -2,8 +2,9 @@ import styled from "styled-components";
 import { Card } from "../uiComponents/Card/Card";
 
 export const ProductCard = styled(Card)`
-  padding: 16px;
+  padding: 12px;
   display: flex;
+  height: auto;
   flex-direction: column;
   align-items: center;
   align-self: flex-start;

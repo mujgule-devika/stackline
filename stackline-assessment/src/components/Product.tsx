@@ -1,7 +1,13 @@
 import React from "react";
 import { useAppSelector } from "../hooks/hooks";
-import TagInput from "../uiComponents/Tag/TagInput";
-import {ProductCard, ProductImage, ProductTitle, Subtitle } from "./ProductStyles";
+import  TagInput  from "../uiComponents/Tag/TagInput";
+import {
+  ProductCard,
+  ProductImage,
+  ProductTitle,
+  Subtitle,
+} from "./ProductStyles";
+import { selectProductData } from "../state/products/productSlice";
 
 type ProductInfoProps = {
   imageUrl: string;
@@ -9,7 +15,7 @@ type ProductInfoProps = {
   tags: string[];
 };
 const Product = () => {
-  const products = useAppSelector((state) => state.products.items);
+  const products = useAppSelector(selectProductData);
   if (!products.length) return <> Loading ...</>;
   const { title, brand, image, subtitle, tags } = products[0];
 

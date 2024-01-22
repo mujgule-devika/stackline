@@ -1,6 +1,6 @@
-import React from 'react';
-import Tag from './Tag';
-import styled from 'styled-components';
+import React from "react";
+import Tag from "./Tag";
+import styled from "styled-components";
 
 const TagsInputContainer = styled.div`
   display: flex;
@@ -11,7 +11,7 @@ interface TagsInputProps {
   tags: string[];
 }
 
-const TagsInput: React.FC<TagsInputProps> = ({ tags }) => {
+export const TagsInput: React.FC<TagsInputProps> = ({ tags }) => {
   return (
     <TagsInputContainer>
       {tags.map((tag, index) => (

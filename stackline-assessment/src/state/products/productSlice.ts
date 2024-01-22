@@ -1,41 +1,44 @@
-import { createSlice, createAsyncThunk, PayloadAction } from '@reduxjs/toolkit';
-import { Product, ProductState } from '../../types/types';
-import productData  from './stackline_frontend_assessment_data_2021.json'
+import { createSlice, createAsyncThunk, PayloadAction } from "@reduxjs/toolkit";
+import { Product, ProductState } from "../../types/types";
+import { fetchProductData } from "../fetchData";
+import { RootState } from "../store";
 
-console.log("json", productData);
+console.log("fetchdata", fetchProductData);
 
 const initialState: ProductState = {
   items: [],
-  status: 'idle',
-  error: null
+  status: "idle",
+  error: null,
 };
 
-export const fetchProduct = createAsyncThunk(
-  'product/fetchProduct',
-  async () => {
-    await new Promise(resolve => setTimeout(resolve, 100));
-    return productData;
-  }
-);
+export const fetchData = createAsyncThunk("fetchData", async () => {
+  const response = await fetchProductData();
+  return response;
+});
 
 const productsSlice = createSlice({
-  name: 'products',
+  name: "products",
   initialState,
   reducers: {},
   extraReducers: (builder) => {
     builder
-      .addCase(fetchProduct.pending, (state) => {
-        state.status = 'loading';
+      .addCase(fetchData.pending, (state) => {
+        state.status = "loading";
       })
-      .addCase(fetchProduct.fulfilled, (state, action:PayloadAction<Product[]>) => {
-        state.status = 'succeeded';
-        state.items = action.payload;
-      })
-      .addCase(fetchProduct.rejected, (state, action) => {
-        state.status = 'failed';
-        state.error = action.error.message || 'Failed to load product';
+      .addCase(
+        fetchData.fulfilled,
+        (state, action: PayloadAction<Product[]>) => {
+          state.status = "succeeded";
+          state.items = action.payload;
+        }
+      )
+      .addCase(fetchData.rejected, (state, action) => {
+        state.status = "failed";
+        state.error = action.error.message || "Failed to load product";
       });
-  }
+  },
 });
 
 export default productsSlice.reducer;
+
+export const selectProductData = (state: RootState) => state.products.items;

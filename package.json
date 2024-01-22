@@ -1,7 +1,7 @@
 {
   "name": "stackline-assessment",
   "version": "0.1.0",
-  "homepage": "https://mujgule-devika.github.io/stackline/",
+  "homepage": "https://mujgule-devika.github.io/stackline",
   "private": true,
   "dependencies": {
     "@reduxjs/toolkit": "^2.0.1",

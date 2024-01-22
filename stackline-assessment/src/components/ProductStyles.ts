@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Card } from "../uiComponents/Card/Card";
+import { Card } from "../resusableComponents/Card/Card";
 
 export const ProductCard = styled(Card)`
   padding: 12px;

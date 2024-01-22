@@ -1,5 +1,5 @@
 import React from "react";
-import { Card } from "../uiComponents/Card/Card";
+import { Card } from "../resusableComponents/Card/Card";
 import { useAppSelector } from "../hooks/hooks";
 import { SalesChartTitle, ChartContainer } from "./SalesChartStyles";
 import { selectProductData } from "../state/products/productSlice";

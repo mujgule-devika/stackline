@@ -1,6 +1,6 @@
 import React from "react";
 import { useAppSelector } from "../hooks/hooks";
-import  TagInput  from "../uiComponents/Tag/TagInput";
+import TagInput from "../resusableComponents/Tag/TagInput";
 import {
   ProductCard,
   ProductImage,
@@ -18,13 +18,6 @@ const Product = () => {
   const products = useAppSelector(selectProductData);
   if (!products.length) return <> Loading ...</>;
   const { title, brand, image, subtitle, tags } = products[0];
-
-  console.log("loading?", title, brand, subtitle, tags);
-  // if (!products.length) return;
-  // const tags = products?.tags;
-
-  console.log("inside product.", title, brand, subtitle, tags);
-  // console.log("tags", tags);
 
   return (
     <ProductCard>

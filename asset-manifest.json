@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/mujgule-devika/stackline/static/css/main.e6c13ad2.css",
+    "main.js": "/mujgule-devika/stackline/static/js/main.5c048c4f.js",
+    "static/media/stackline_logo.svg": "/mujgule-devika/stackline/static/media/stackline_logo.5935081bd899ecfe02395699e768f84e.svg",
+    "index.html": "/mujgule-devika/stackline/index.html",
+    "main.e6c13ad2.css.map": "/mujgule-devika/stackline/static/css/main.e6c13ad2.css.map",
+    "main.5c048c4f.js.map": "/mujgule-devika/stackline/static/js/main.5c048c4f.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e6c13ad2.css",
+    "static/js/main.5c048c4f.js"
+  ]
+}

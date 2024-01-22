@@ -1,5 +1,4 @@
 import React from "react";
-import { Card } from "../resusableComponents/Card/Card";
 import { useAppSelector } from "../hooks/hooks";
 import { selectProductData } from "../state/products/productSlice";
 import {
@@ -17,6 +16,11 @@ export const SalesTable = () => {
   if (!salesData.length) return null;
   const salesTableData = salesData[0].sales;
 
+  const currencyFormatter = new Intl.NumberFormat("en-US", {
+    style: "currency",
+    currency: "USD",
+  });
+
   return (
     <TableContainer>
       <StyledTable>
@@ -33,10 +37,16 @@ export const SalesTable = () => {
           {salesTableData.map((item, index) => (
             <TableRow key={index}>
               <TableCell>{item.weekEnding}</TableCell>
-              <TableCell>{item.retailSales}</TableCell>
-              <TableCell>{item.wholesaleSales}</TableCell>
+              <TableCell>
+                {currencyFormatter.format(item.retailSales)}
+              </TableCell>
+              <TableCell>
+                {currencyFormatter.format(item.wholesaleSales)}
+              </TableCell>
               <TableCell>{item.unitsSold}</TableCell>
-              <TableCell>{item.retailerMargin}</TableCell>
+              <TableCell>
+                {currencyFormatter.format(item.retailerMargin)}
+              </TableCell>
             </TableRow>
           ))}
         </TableBody>

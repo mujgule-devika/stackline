@@ -1,11 +1,11 @@
 import { styled } from "styled-components";
 
 export const TableContainer = styled.div`
-  margin: 1em;
+  margin: 10px;
   border-radius: 8px;
   overflow-x: auto;
   overflow-y: auto;
-  height: 400px; // Adjust this to your preference
+  height: 400px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   background-color: #fff;
 `;
@@ -23,9 +23,7 @@ export const TableHead = styled.thead`
 export const TableBody = styled.tbody``;
 
 export const TableRow = styled.tr`
-  &:nth-child(odd) {
-    background-color: #f7f7f7;
-  }
+background-color: #fff;
 `;
 
 export const TableHeader = styled.th`
